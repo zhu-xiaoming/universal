@@ -1,6 +1,6 @@
 {
   "name": "vscode-universal",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Utility for creating Universal macOS applications from two x64 and arm64 Electron applications",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -20,6 +20,7 @@
   ],
   "author": "Samuel Attard",
   "scripts": {
+    "postinstall": "yarn build",
     "build": "tsc && tsc -p tsconfig.esm.json",
     "lint": "prettier --check \"src/**/*.ts\"",
     "prepublishOnly": "npm run build",
